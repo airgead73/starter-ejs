@@ -1,3 +1,13 @@
 .env
 node_modules
 .DS_Store
+
+// gulp output
+*/bundle.js
+*/bundle.js.map
+*/bundle.min.js
+*/bundle.min.js.map
+*/main.css
+*/main.css.map
+*/main.min.css
+*/main.min.css.map
