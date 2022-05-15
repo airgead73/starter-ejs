@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+  padding-top: 30px;
+}
+
+.header, .footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+.footer__credit {
+  text-align: center;
+}
+
+.aside {
+  padding: 40px 20px 40px 20px;
+}
+
+@media screen and (min-width: 768px) {
+
+  .article {
+    padding: 30px 40px;
+  }
+  
+  .aside {
+    margin-top: 0;
+    padding: 30px 40px;
+  }
+
+  .rule {
+    display: none;
+  }
+  
+}
