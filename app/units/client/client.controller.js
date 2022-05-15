@@ -1,5 +1,5 @@
 const asyncHandler = require('express-async-handler');
-const { isDev, isPr } = require('../../config/env');
+const { isDev } = require('../../config/env');
 
 /**
  * @desc dashboard view
