@@ -4,7 +4,10 @@ const clientRouter = Router();
 // controllers
 const { dashboard } = require('./client.controller');
 
+// middleware
+const { checkAuthClient } = require('../../middleware');
+
 // routes
-clientRouter.route('/').get(dashboard);
+clientRouter.route('/').get(checkAuthClient, dashboard);
 
 module.exports = clientRouter;

@@ -51,6 +51,10 @@ app.set('view engine', 'ejs');
 /**
  * locals
  */
+ app.use(function (req, res, next) {
+  res.locals.isAuthenticated = req.oidc.isAuthenticated();
+  next();
+});
 
 /**
  * routes
