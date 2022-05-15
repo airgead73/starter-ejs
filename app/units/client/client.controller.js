@@ -10,5 +10,7 @@ const { isDev, isPr } = require('../../config/env');
 exports.dashboard = asyncHandler(async (req, res, next) => {
   return res
     .status(200)
-    .send('dashboard');
+    .render('pages/dashboard', {
+      title: 'starter'
+    });
 });
