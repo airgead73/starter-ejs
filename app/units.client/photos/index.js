@@ -1,5 +1,5 @@
-const authorRouter = require('./authors.routes');
+const photoRouter = require('./photos.routes');
 
 module.exports = {
-  authorRouter
+  photoRouter
 }
