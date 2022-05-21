@@ -1,5 +1,5 @@
-const authorRouter = require('./authors.routes');
+const bookRouter = require('./books.routes');
 
 module.exports = {
-  authorRouter
+  bookRouter
 }
