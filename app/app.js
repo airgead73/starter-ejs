@@ -17,7 +17,7 @@
 const { isDev } = require('./config/env');
 const { handleError } = require('./middleware');
 const { authConfig, connectDB, helmetPolicies, limiter, sessionConfig } = require('./config');
-const appRouter = require('./router');
+const appRouter = require('./units.client/router.client');
 
 /**
  * app activation
