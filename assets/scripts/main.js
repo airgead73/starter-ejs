@@ -1,4 +1,5 @@
-import { initStart, initAdd, initUpdate, initEnd } from './modules/index';
-const startForm = document.getElementById('startShift');
+function loadApplication() {
+  console.log('Application is loaded');
+}
 
-if(startForm) initStart(startForm); 
+loadApplication();

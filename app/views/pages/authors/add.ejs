@@ -2,7 +2,7 @@
   <%- include ('../../partials/header') %>
 
     <h2>Add Author</h2>
-    <form>
+    <form id="author_add" method="POST" action="/api/authors">
       <div class="row">
         <div class="four columns">
           <label for="fname">first name</label>
@@ -19,6 +19,7 @@
 
       </div>
       <input class="button-primary" type="submit" value="add author">
+      <input class="button-primary" type="reset" value="add reset">
     </form>
 
     <%- include('../../partials/footer') %>

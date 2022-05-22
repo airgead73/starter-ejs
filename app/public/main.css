@@ -1004,10 +1004,10 @@ body {
   flex-basis: auto;
   background-color: #333333;
   color: #f2f2f2;
-  padding-top: 12.5px;
-  padding-bottom: 12.5px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .footer__credit {
