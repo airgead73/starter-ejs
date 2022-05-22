@@ -1,4 +1,5 @@
 const asyncHandler = require('express-async-handler');
+const Author = require('./author');
 
 /**
  * @desc Create author
@@ -11,14 +12,19 @@ exports.create = asyncHandler(async (req, res, next) => {
   const { success, errors } = res.val_results;
 
   if(success) {
+    const author = new Author(req.body);
+    await author.save();
+
     return res
     .status(200)
     .json({
       success: true,
-      message: 'POST author',
-      author: req.body
+      message: `Author created: ${author.fname} ${author.lname}.`,
+      author
     });
+
   } else {
+
     return res
     .status(400)
     .json({
@@ -38,11 +44,14 @@ exports.create = asyncHandler(async (req, res, next) => {
 
  exports.read = asyncHandler(async (req, res, next) => {
 
+  const { success, count, data: authors } = res.results;
+
   return res
     .status(200)
     .json({
-      success: true,
-      message: 'GET authors'
+      success,
+      count,
+      authors
     });
 
 });

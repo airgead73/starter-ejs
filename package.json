@@ -39,6 +39,7 @@
     "cloudinary": "^1.29.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
+    "date-fns": "^2.28.0",
     "ejs": "^3.1.8",
     "express": "^4.17.3",
     "express-async-handler": "^1.2.0",
