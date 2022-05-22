@@ -5,8 +5,8 @@ const { bookRouter } = require('./books');
 const { photoRouter } = require('./photos');
 
 // middleware 
-const { checkAuthClient } = require('../middleware');
-apiRouter.use(checkAuthClient);
+//const { checkAuthClient } = require('../middleware');
+//apiRouter.use(checkAuthClient);
 
 // routes
 apiRouter.use('/authors', authorRouter);
