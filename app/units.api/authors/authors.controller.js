@@ -8,12 +8,25 @@ const asyncHandler = require('express-async-handler');
 
 exports.create = asyncHandler(async (req, res, next) => {
 
-  return res
+  const { success, errors } = res.val_results;
+
+  if(success) {
+    return res
     .status(200)
     .json({
       success: true,
-      message: 'POST author'
+      message: 'POST author',
+      author: req.body
     });
+  } else {
+    return res
+    .status(400)
+    .json({
+      success: false,
+      message: 'Something went wrong.',
+      errors
+    });
+  }
 
 });
 
