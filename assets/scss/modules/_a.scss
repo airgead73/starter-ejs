@@ -1,3 +1,9 @@
+$bodyPadding: 50px;
+$offwhite: mix(black, white, 5%);
+$lightgray: mix(black, white, 10%);
+$gray: mix(black, white, 50%);
+$darkgray: mix(black, white, 80%);
+
 body {
   display: flex;
   flex-direction: column;
@@ -8,12 +14,27 @@ body {
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: auto;
+  background-color: $lightgray;
+  padding: {
+    top: ($bodyPadding / 2);
+    bottom: ($bodyPadding / 2);
+    left: $bodyPadding;
+    right: $bodyPadding;
+  }
 }
 
 .header, .footer {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
+  background-color: $darkgray;
+  color: $offwhite;
+  padding: {
+    top: ($bodyPadding / 4);
+    bottom: ($bodyPadding / 4);
+    left: $bodyPadding;
+    right: $bodyPadding;
+  }
 }
 
 .footer__credit {
