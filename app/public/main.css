@@ -872,6 +872,44 @@ body {
 /* Larger than mobile */
 /* Larger than phablet (also point when grid becomes active) */
 /* Larger than tablet */
+@media (min-width: 750px) {
+  .nav__btn {
+    display: none;
+  }
+
+  .nav__list {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-basis: auto;
+    left: auto;
+    right: auto;
+  }
+  .nav__list.hide {
+    display: flex;
+  }
+
+  .nav__item {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .main {
+    flex-direction: row;
+  }
+
+  .aside--left {
+    flex: 2.5;
+  }
+
+  .aside--right {
+    flex: 2.5;
+  }
+
+  .article {
+    flex: 5;
+  }
+}
 /* Larger than desktop */
 /* Larger than Desktop HD */
 /*# sourceMappingURL=main.css.map */

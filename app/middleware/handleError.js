@@ -1,3 +1,4 @@
+const { isDev } = require('../config/env');
 const handleError = (err, req, res, next) => {
   let statusCode = err.status || res.statusCode || 500;
   if(err.name === 'CastError') {
@@ -22,7 +23,8 @@ const handleError = (err, req, res, next) => {
         status: statusCode,
         message: err.message,
         title: 'Error',
-        main: 'main--error'
+        main: 'main--error',
+        development: isDev
       })
   } else {
     return res
