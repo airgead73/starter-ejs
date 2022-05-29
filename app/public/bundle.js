@@ -1,9 +1,13 @@
 (function () {
 'use strict';
 
-const jsScripts = Array.from(document.querySelectorAll('[data-script]'));
+const menuBtn = document.getElementById('nav__btn');
+const navList = document.getElementById('nav__list');
 
-if(jsScripts.length) console.log(jsScripts);
+menuBtn.addEventListener('click', function(e) {
+  e.preventDefault();
+  navList.classList.toggle('hide');
+});
 
 }());
 //# sourceMappingURL=bundle.js.map
