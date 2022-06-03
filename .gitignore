@@ -1,7 +1,7 @@
 .env
 node_modules
 .DS_Store
-.notes.txt
+notes.txt
 
 # gulp output
 */bundle.js
