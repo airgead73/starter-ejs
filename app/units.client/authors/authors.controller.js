@@ -1,4 +1,5 @@
 const asyncHandler = require('express-async-handler');
+const Author = require('../../units.api/authors/author');
 const { isDev } = require('../../config/env');
 
 /**
@@ -8,10 +9,16 @@ const { isDev } = require('../../config/env');
  * */
 
 exports.dashboard = asyncHandler(async (req, res, next) => {
+
+  const { success, count, data: authors } = res.results;
+
   return res
     .status(200)
     .render('pages/authors/dashboard', {
       title: 'authors',
+      success,
+      count,
+      authors,
       development: isDev
     });
 });

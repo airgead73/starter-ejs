@@ -6,6 +6,21 @@
     </aside>
     <article class="article">
       <h2 class="article__title">Author Dashboard</h2>
+      <% if(count> 1) { %>
+        <p>There are <%= authors.length %> authors.</p>
+
+        <ul>
+          <% authors.forEach(author=> { %>
+
+            <li>
+              <%= author.fname %>
+                <%= author.lname %>
+            </li>
+
+            <% }) %>
+        </ul>
+
+        <% } %>
     </article>
     <aside class="aside aside--right">
       <h3 class="aside__title">right bar</h3>

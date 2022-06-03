@@ -12,6 +12,9 @@ const authorSchema = mongoose.Schema({
     required: [true, 'Please, add last name.'],
     maxlength: 50
   },
+  slug: {
+    type: String
+  },
   dob: {
     type: Date,
     required: [true, ['Please, add dob.']]
@@ -23,6 +26,28 @@ const authorSchema = mongoose.Schema({
 
 authorSchema.set('toObject', { virtuals: true });
 authorSchema.set('toJSON', { virtuals: true });
+
+authorSchema.pre("save", function(next) {
+
+  this.fname = this.fname.toLowercase();
+  this.lname = this.lname.toLowercase();
+
+  const fullname = `${this.lname} ${this.fname}`;
+  this.slug = slugify(fullname, {
+    replacement: '-',
+    lower: true,
+    trim: true
+  });
+
+  next();
+
+});
+
+// authorSchema.virtual('display').get(function() {
+
+//   const displayFirst = this.fname
+
+// });
 
 authorSchema.virtual('dob_formatted').get(function() {
   return format(this.dob, 'MMMM d, yyyy')
