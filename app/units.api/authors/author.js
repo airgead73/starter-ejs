@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const format = require('date-fns/format');
+const slugify = require('slugify');
 
 const authorSchema = mongoose.Schema({
   fname: {
@@ -28,9 +29,6 @@ authorSchema.set('toObject', { virtuals: true });
 authorSchema.set('toJSON', { virtuals: true });
 
 authorSchema.pre("save", function(next) {
-
-  this.fname = this.fname.toLowercase();
-  this.lname = this.lname.toLowercase();
 
   const fullname = `${this.lname} ${this.fname}`;
   this.slug = slugify(fullname, {
