@@ -1,7 +1,13 @@
+$offwhite: mix(black, white, 1%);
+$offblack: mix(black, white, 90%);
+$navlink: mix(#1EAEDB, white, 25%);
+$layoutPadding: 40px;
+
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  color: $offblack;
 }
 
 .main {
@@ -10,11 +16,14 @@ body {
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: auto;
+  padding: {
+    left: $layoutPadding;
+    right: $layoutPadding;
+  }
 }
 
 .aside--left, .aside--right, .article {
   flex-basis: auto;
-  border: 1px solid red;
 }
 
 .header,
@@ -22,6 +31,12 @@ body {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
+  background-color: $offblack;
+  color: $offwhite;
+  padding: {
+    left: $layoutPadding;
+    right: $layoutPadding;
+  }
 }
 
 .footer > p {
@@ -33,6 +48,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  &__title a {
+    color: $navlink;
+    text-decoration: none;
+  }
+
 }
 
 .nav__list {
@@ -40,11 +60,10 @@ body {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  border: 1px solid green;
   left: 0;
   right: 0;
   padding-left: 0;
-  background-color: white;
+  background-color: $offblack;
   &.hide {
     display: none;
   }
@@ -57,6 +76,10 @@ body {
     top: 10px;
     bottom: 10px;
   }
+}
+
+.nav__link {
+  color: $navlink;
 }
 
 
