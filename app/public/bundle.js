@@ -15,12 +15,13 @@ const initMenu = () => {
 const initForms = () => {
   const forms = Array.from(document.querySelectorAll('[data-form]'));
   forms.forEach(form => {
-    assignForm(form.getAttribute('data-form'));
+    assignForm(form);
   });
 };
 
-const assignForm = ($formType) => {  
-  console.log('form type:', $formType);
+const assignForm = ($form) => {
+  const formType = $form.getAttribute('data-form');
+  console.log('form type:', formType);
 };
 
 initMenu();
