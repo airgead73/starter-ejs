@@ -1,7 +1,4 @@
-const menuBtn = document.getElementById('nav__btn');
-const navList = document.getElementById('nav__list')
+import { initMenu, initForms } from './modules/index';
 
-menuBtn.addEventListener('click', function(e) {
-  e.preventDefault();
-  navList.classList.toggle('hide')
-});
+initMenu();
+initForms();
