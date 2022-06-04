@@ -882,6 +882,10 @@ body {
   color: #c7ebf6;
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
 /* Larger than mobile */
 /* Larger than phablet (also point when grid becomes active) */
 /* Larger than tablet */

@@ -2,7 +2,9 @@
   <%- include ('../../partials/header') %>
 
     <aside class="aside aside--left">
-      <h3 class="aside__title">left bar</h3>
+      <h3 class="aside__title">
+        <a href="/authors/add">add new author</a>
+      </h3>
     </aside>
     <article class="article">
       <h2 class="article__title">Author Dashboard</h2>
@@ -12,9 +14,16 @@
         <ul>
           <% authors.forEach(author=> { %>
 
-            <li>
-              <%= author.fname %>
-                <%= author.lname %>
+            <li><span class="capitalize">
+                <%= author.fname %>
+                  <%= author.lname %>
+              </span>
+              <a href="/authors/<%= author.id %>">
+                detail
+              </a>&nbsp;
+              <a href="/authors/<%= author.id %>/update">
+                update
+              </a>
             </li>
 
             <% }) %>

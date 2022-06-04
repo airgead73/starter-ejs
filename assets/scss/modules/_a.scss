@@ -82,6 +82,10 @@ body {
   color: $navlink;
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
 
 /* Larger than mobile */
 @media (min-width: 400px) {}

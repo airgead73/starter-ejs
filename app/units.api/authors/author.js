@@ -1,17 +1,22 @@
 const mongoose = require('mongoose');
 const format = require('date-fns/format');
 const slugify = require('slugify');
+const { capitalize } = require('../../util');
 
 const authorSchema = mongoose.Schema({
   fname: {
     type: String,
     required: [true, ['Please, add first name.']],
-    maxlength: 50
+    maxlength: 50,
+    lowercase: true,
+    trim: true
   },
   lname: {
     type: String,
     required: [true, 'Please, add last name.'],
-    maxlength: 50
+    maxlength: 50,
+    lowercase: true,
+    trim: true
   },
   slug: {
     type: String
