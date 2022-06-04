@@ -7,19 +7,22 @@
     <article class="article">
       <h2 class="article__title">Add Author</h2>
 
-      <form id="author_add" data-form="author" method="POST" action="/api/authors">
+      <form id="author_add" data-form="author" method="POST" action="/api/authors"
+        enctype="application/x-www-form-urlencoded">
         <div class="row">
           <div class="four columns">
             <label for="fname">first name</label>
-            <input class="u-full-width" type="text" placeholder="type first name here" id="fname" name="fname">
+            <input class="u-full-width" type="text" placeholder="type first name here" id="fname" name="fname"
+              maxlength="50" required>
           </div>
           <div class="four columns">
             <label for="lname">last name</label>
-            <input class="u-full-width" type="text" placeholder="type last name here" id="lname" name="lname">
+            <input class="u-full-width" type="text" placeholder="type last name here" id="lname" name="lname"
+              maxlength="50" required>
           </div>
           <div class="four columns">
             <label for="dob">date of birth</label>
-            <input class="u-full-width" type="date" id="dob" name="dob">
+            <input class="u-full-width" type="date" id="dob" name="dob" required>
           </div>
 
         </div>

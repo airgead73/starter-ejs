@@ -24,7 +24,8 @@
               <a href="/authors/<%= author.id %>/update">
                 update
               </a>
-              <button type="button">delete</button>
+              <button type="button" data-fetch data-method="DELETE" data-action="/api/authors/<% author.id %>"
+                data-enctype="application/x-www-form-urlencoded" name="delete_author">delete</button>
             </li>
 
             <% }) %>
