@@ -12,20 +12,26 @@ const initMenu = () => {
   
 };
 
-const initForms = () => {
-  const forms = Array.from(document.querySelectorAll('[data-form]'));
-  forms.forEach(form => {
-    assignForm(form);
-  });
+const apiFetch = ($target) => {
+  console.log($target.getAttribute('action'));
 };
 
-const assignForm = ($form) => {
-  const formType = $form.getAttribute('data-form');
-  console.log('form type:', formType);
+const initForms = ($formsArr) => {
+
+  console.log('Forms on this page:', $formsArr.length);
+  $formsArr.forEach($form => {
+    $form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      apiFetch(e.target);
+    });
+  });
+  
 };
+
+const forms = Array.from(document.querySelectorAll('form'));
 
 initMenu();
-initForms();
+if(forms.length) initForms(forms);
 
 }());
 //# sourceMappingURL=bundle.js.map
