@@ -7,7 +7,8 @@
     <article class="article">
       <h2 class="article__title">Add Author</h2>
 
-      <form id="author_add" data-form="author" method="POST" action="/api/authors" enctype="application/json">
+      <form id="author_add" data-form="author" method="POST" action="/api/authors" enctype="application/json"
+        novalidate>
         <div class="row">
           <div class="four columns">
             <label for="fname">first name</label>
@@ -26,7 +27,7 @@
 
         </div>
         <input class="button-primary" type="submit" value="add author">
-        <input class="button-primary" type="reset" value="add reset">
+        <input class="button-primary" type="reset" value="reset">
       </form>
     </article>
     <aside class="aside aside--right">

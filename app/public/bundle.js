@@ -12,13 +12,28 @@ const initMenu = () => {
   
 };
 
+const getAttrs = ($target) => {
+
+  const attrs = new Object;
+
+  const attrNames = $target.getAttributeNames();
+
+  attrNames.forEach(name => {    
+    attrs[name] = $target.getAttribute(name);    
+  });
+
+  console.log(attrs);  
+
+};
+
 const apiFetch = ($target) => {
-  console.log($target.getAttribute('action'));
+
+ getAttrs($target);
+
 };
 
 const initForms = ($formsArr) => {
 
-  console.log('Forms on this page:', $formsArr.length);
   $formsArr.forEach($form => {
     $form.addEventListener('submit', function(e) {
       e.preventDefault();
