@@ -51,6 +51,50 @@
 
 //@import "../../node_modules/bootswatch/dist/lux/bootswatch";
 
+/*
+* Adapted from:
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* 
+* and
+* 
+* How to Create a Flexbox Grid by Tania Rascia
+* October 7, 2015
+* https://www.taniarascia.com/easiest-flex-grid-ever/
+*
+*/
+
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Normalize
+- Abstracts
+- Grid
+- Base Styles
+- Typography
+- Links
+- Buttons
+- Forms
+- Lists
+- Code
+- Tables
+- Figures
+- Spacing
+- Utilities
+*/
+
 @import './modules/normalize';
-@import './modules/skeleton-adapted';
-@import './modules/a';
+@import './modules/abstracts';
+@import './modules/grid';
+@import './modules/layout';
+@import './modules/base';
+@import './modules/typography';
+@import './modules/links';
+@import './modules/buttons';
+@import './modules/forms';
+@import './modules/lists';
+@import './modules/code';
+@import './modules/tables';
+@import './modules/figures';
+@import './modules/spacing';
+@import './modules/utilities';
