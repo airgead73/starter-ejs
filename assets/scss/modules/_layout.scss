@@ -73,15 +73,35 @@ main {
 
 article {
   flex-basis: 100%;
+  padding: {
+    top: 0;
+    bottom: 0;
+    left: $layoutPadding;
+    right: $layoutPadding;
+  }
   @include device(lg) {
     flex: 6;
+    padding: {
+      left: calc($layoutPadding * 3);
+      right: calc($layoutPadding * 3);
+    }
   }
 }
 
 aside {
   flex-basis: 100%;
+  padding: {
+    top: 0;
+    bottom: 0;
+    left: $layoutPadding;
+    right: $layoutPadding;
+  } 
   @include device(lg) {
     flex: 4;
+    padding: {
+      left: calc($layoutPadding * 3);
+      right: calc($layoutPadding * 3);
+    }
   }
 }
 
