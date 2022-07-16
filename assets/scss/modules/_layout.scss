@@ -15,6 +15,10 @@ header {
   top: auto;
   left: auto;
   width: auto;
+  padding: {
+    left: $layoutPadding;
+    right: $layoutPadding;
+  }
   @include device(lg) {
     position: fixed;
     top: 0;

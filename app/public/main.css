@@ -624,6 +624,8 @@ header {
   top: auto;
   left: auto;
   width: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 @media screen and (min-width: 1024px) {
   header {
@@ -849,7 +851,7 @@ input[type=button] {
   display: inline-block;
   height: 38px;
   padding: 0 30px;
-  color: #555;
+  color: #b7410e;
   text-align: center;
   font-size: 11px;
   font-weight: 600;
@@ -860,7 +862,7 @@ input[type=button] {
   white-space: nowrap;
   background-color: transparent;
   border-radius: 4px;
-  border: 1px solid #33c3f0;
+  border: 1px solid #b7410e;
   cursor: pointer;
   box-sizing: border-box;
 }
