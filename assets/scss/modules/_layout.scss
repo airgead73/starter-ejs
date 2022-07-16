@@ -4,7 +4,14 @@ body {
   min-height: 100vh;
 }
 
-header {}
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: auto;
+  left: auto;
+}
 
 h1 {
   a {
@@ -14,11 +21,28 @@ h1 {
 
 nav {}
 
-nav button {}
+nav button {
+  display: block;
+  @include device(lg) {
+    display: none;
+  }
+}
 
-nav ul {}
+nav ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: white;
+  z-index: 1;
+  width: 100%;
+  @include device(lg) {
+    display: block;
+  }
+}
 
-nav ul.show {}
+nav ul.show {
+  display: block;
+}
 
 main {
   flex: 1;
