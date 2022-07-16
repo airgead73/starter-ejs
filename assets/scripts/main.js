@@ -1,6 +1,3 @@
-import { initMenu, initForms } from './modules/index';
-
-const forms = Array.from(document.querySelectorAll('form'));
+import { initMenu } from './modules/index';
 
 initMenu();
-if(forms.length) initForms(forms);

@@ -1,3 +1,6 @@
+(function () {
+'use strict';
+
 const initMenu = () => {
   const menuBtn = document.getElementById('nav__btn');
   const navList = document.getElementById('nav__list');
@@ -7,6 +10,9 @@ const initMenu = () => {
     navList.classList.toggle('show');
   });
   
-}
+};
 
-export default initMenu;
+initMenu();
+
+}());
+//# sourceMappingURL=bundle.js.map
