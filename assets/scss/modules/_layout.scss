@@ -4,12 +4,7 @@ body {
   min-height: 100vh;
 }
 
-header {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+header {}
 
 h1 {
   a {
@@ -19,59 +14,19 @@ h1 {
 
 nav {}
 
-nav button {
-  display: block;
-  @include device(lg) {
-    display: none;
-  }
-}
+nav button {}
 
-nav ul {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  left: 0;
-  background-color: white;
-  z-index: 1;
-  list-style: none;
-  width: 100%;
-  @include device(lg) {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    left: auto;
-  }
-}
+nav ul {}
 
-nav ul.show {
-  display: flex;
-}
+nav ul.show {}
 
 main {
-  display: flex;
-  flex-direction: column;
   flex: 1;
-  @include container;
-  @include device(lg) {
-    flex-direction: row;
-  }
 }
 
-article {
-  flex-basis: 100%;
-  @include device(lg) {
-    flex: 6;
-  }
-}
+article {}
 
-aside {
-  flex-basis: 100%;
-  @include device(lg) {
-    flex: 4
-  }
-}
+aside {}
 
-footer {
-  text-align: center;
-}
+footer {}
 
