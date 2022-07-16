@@ -1,3 +1,5 @@
+$leftBar: 300px;
+
 body {
   display: flex;
   flex-direction: column;
@@ -7,10 +9,23 @@ body {
 header {
   position: relative;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   top: auto;
   left: auto;
+  width: auto;
+  @include device(lg) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: $leftBar;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid gray;
+  }
 }
 
 h1 {
@@ -37,6 +52,8 @@ nav ul {
   width: 100%;
   @include device(lg) {
     display: block;
+    position: relative;
+    left: auto;
   }
 }
 
@@ -46,11 +63,35 @@ nav ul.show {
 
 main {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  @include device(lg) {
+    flex-direction: row;
+    margin-left: $leftBar;
+  }
 }
 
-article {}
+article {
+  flex-basis: 100%;
+  @include device(lg) {
+    flex: 6;
+  }
+}
 
-aside {}
+aside {
+  flex-basis: 100%;
+  @include device(lg) {
+    flex: 4;
+  }
+}
 
-footer {}
+footer {
+  text-align: center;
+  @include device(lg) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: $leftBar;
+  }
+}
 
