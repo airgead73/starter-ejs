@@ -1,4 +1,4 @@
-$leftBar: 300px;
+$leftBar: 250px;
 
 body {
   display: flex;
@@ -19,6 +19,8 @@ header {
     left: $layoutPadding;
     right: $layoutPadding;
   }
+  background-color: $accentColor;
+  color: $baseWhite;
   @include device(lg) {
     position: fixed;
     top: 0;
@@ -28,20 +30,24 @@ header {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    border: 1px solid gray;
   }
 }
 
 h1 {
   a {
     text-decoration: none;
+    color: inherit;
   }
 }
 
-nav {}
+nav {
+  background-color: inherit;
+}
 
 nav button {
   display: block;
+  color: inherit;
+  border-color: $baseWhite;
   @include device(lg) {
     display: none;
   }
@@ -51,7 +57,7 @@ nav ul {
   display: none;
   position: absolute;
   left: 0;
-  background-color: white;
+  background-color: inherit;
   z-index: 1;
   width: 100%;
   @include device(lg) {
@@ -59,6 +65,10 @@ nav ul {
     position: relative;
     left: auto;
   }
+}
+
+nav a {
+  color: inherit;
 }
 
 nav ul.show {
@@ -111,6 +121,7 @@ aside {
 
 footer {
   text-align: center;
+  color: $baseWhite;
   @include device(lg) {
     position: fixed;
     bottom: 0;
