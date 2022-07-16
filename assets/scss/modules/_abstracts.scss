@@ -3,10 +3,13 @@
 $baseTextColor: #222;
 $baseGray: #555;
 $lightGray: #e1e1e1;
+$offblack: mix(black, white, 80%);
 $baseWhite: #fff;
 $baseBlack: #333;
 $baseBorder: #33c3f0;
-$accentColor: #1eaedb;
+//$accentColor: #1eaedb;
+$accentColor: #b7410e;
+//$accentColor: $offblack;
 $accentHover: mix($accentColor, black, 80%);
 
 $gray-0: #e1e1e1;
